@@ -2,7 +2,7 @@ import Link from "next/link"
 import { AnchorHTMLAttributes } from "react"
 import { ArrowRightIcon } from "lucide-react"
 
-import { cn } from "@/utils"
+import { cn } from "@/lib/utils"
 
 interface ShinyButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode
