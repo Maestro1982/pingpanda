@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Check } from "lucide-react"
 
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
@@ -111,7 +112,49 @@ const Page = () => {
           </MaxWidthWrapper>
         </div>
       </section>
-      <section></section>
+
+      <section className="relative py-24 sm:py-32 bg-brand-25">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div>
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Intuitive Monitoring
+            </h2>
+            <Heading>Stay ahead with real-time insights</Heading>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+            {/* first bento grid element */}
+            <div className="relative row-span-2">
+              <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
+
+              <div className="relative flex flex-col h-full overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div className="px-8 pt-8 pb-3 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                    Real-time notifications
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Get notified about critical events the moment they happen,
+                    no matter if you&apos;re at home or on the go.
+                  </p>
+                </div>
+
+                <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <Image
+                      className="size-full object-cover object-top"
+                      src="/phone-screen.png"
+                      alt="Phone screen displaying app interface"
+                      fill
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
       <section></section>
     </>
   )
