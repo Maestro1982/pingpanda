@@ -10,6 +10,8 @@ import { client } from "@/lib/client"
 
 import { LoadingSpinner } from "@/components/loading-spinner"
 
+import { DashboardEmptyState } from "@/app/dashboard/dashboard-empty-state"
+
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Modal } from "@/components/ui/modal"
 
@@ -49,7 +51,7 @@ export const DashboardPageContent = () => {
   }
 
   if (!categories || categories.length === 0) {
-    return <div>empty state</div>
+    return <DashboardEmptyState />
   }
 
   return (
