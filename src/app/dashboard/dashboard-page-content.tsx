@@ -79,7 +79,9 @@ export const DashboardPageContent = () => {
 
                 <div>
                   <h3 className="text-lg/7 font-medium tracking-tight text-gray-950">
-                    {category.emoji || "📁"} {category.name}
+                    {category.emoji || "📁"}{" "}
+                    {category.name.charAt(0).toUpperCase() +
+                      category.name.slice(1)}
                   </h3>
                   <p className="text-sm/6 text-gray-600">
                     {format(category.createdAt, "MMM d, yyyy")}

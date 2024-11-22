@@ -5,9 +5,9 @@ import { db } from "@/lib/db"
 
 import { DashboardIndividualPage } from "@/components/dashboard-individual-page"
 
-import { UpgradePageContent } from "@/app/dashboard/(account)/upgrade/upgrade-page-content"
+import { AccountSettings } from "@/app/dashboard/(settings)/account-settings/settings-page-content"
 
-const AccountUpgradePage = async () => {
+const AccountSettingsPage = async () => {
   const auth = await currentUser()
 
   if (!auth) {
@@ -21,9 +21,9 @@ const AccountUpgradePage = async () => {
   if (!user) redirect("/sign-in")
 
   return (
-    <DashboardIndividualPage title="Pro Membership">
-      <UpgradePageContent plan={user.plan} />
+    <DashboardIndividualPage title="Account Settings">
+      <AccountSettings discordId={user.discordId ?? ""} />
     </DashboardIndividualPage>
   )
 }
-export default AccountUpgradePage
+export default AccountSettingsPage

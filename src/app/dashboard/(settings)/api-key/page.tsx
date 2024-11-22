@@ -5,9 +5,9 @@ import { db } from "@/lib/db"
 
 import { DashboardIndividualPage } from "@/components/dashboard-individual-page"
 
-import { UpgradePageContent } from "@/app/dashboard/(account)/upgrade/upgrade-page-content"
+import { ApiKeySettings } from "@/app/dashboard/(settings)/api-key/api-key-settings"
 
-const AccountUpgradePage = async () => {
+const ApiKeySettingsPage = async () => {
   const auth = await currentUser()
 
   if (!auth) {
@@ -21,9 +21,9 @@ const AccountUpgradePage = async () => {
   if (!user) redirect("/sign-in")
 
   return (
-    <DashboardIndividualPage title="Pro Membership">
-      <UpgradePageContent plan={user.plan} />
+    <DashboardIndividualPage title="API Key">
+      <ApiKeySettings apiKey={user.apiKey ?? ""} />
     </DashboardIndividualPage>
   )
 }
-export default AccountUpgradePage
+export default ApiKeySettingsPage
