@@ -49,7 +49,9 @@ const CategoryDetailPage = async ({ params }: CategoryDetailPageProps) => {
 
   return (
     <DashboardIndividualPage
-      title={`${category.emoji} ${category.name} events`}
+      title={`${category.emoji} ${
+        category.name.charAt(0).toUpperCase() + category.name.slice(1)
+      } events`}
     >
       <CategoryPageContent hasEvents={hasEvents} category={category} />
     </DashboardIndividualPage>
