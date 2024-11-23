@@ -15,7 +15,7 @@ import { LoadingSpinner } from "@/components/loading-spinner"
 
 export const PaymentSuccessModal = () => {
   const router = useRouter()
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(true)
 
   const { data, isPending } = useQuery({
     queryFn: async () => {

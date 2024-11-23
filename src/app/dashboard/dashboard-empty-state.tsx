@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 
 import { client } from "@/lib/client"
