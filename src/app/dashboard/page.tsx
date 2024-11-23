@@ -31,7 +31,7 @@ const DashboardPage = async ({ searchParams }: DashboardPageProps) => {
   })
 
   if (!user) {
-    redirect("/sign-in")
+    redirect("/welcome")
   }
 
   const intent = searchParams.intent
